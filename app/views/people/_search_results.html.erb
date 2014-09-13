@@ -21,8 +21,8 @@
           <div class="persondetails hide">
             <div class="row">
               <div class="raw1 large-6 columns">
-                <span class="raw">1500 North Airport Road<br />
-                Normal, IL 61761
+                <span class="raw"><%= person.household.address.line1 %><br />
+                <%= person.household.address.city_state_zip %>
                 </span>
               </div>
               <div class="edit_fields1 large-5 columns hide">
@@ -61,7 +61,7 @@
               <div class="raw2 large-6 columns">
                 <span class="raw">
                     <%= mail_to "contactus@eastviewcc.org" %><br />
-                    (309) 451-5000
+                    <%= person.phone %>
                 </span>
               </div>
               <div class="edit_fields2 large-4 columns hide">
